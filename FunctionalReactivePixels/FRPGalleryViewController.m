@@ -6,13 +6,13 @@
 //  Copyright © 2016 Alessandro dos Santos Pinto. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FRPGalleryViewController.h"
 
-@interface ViewController ()
+@interface FRPGalleryViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FRPGalleryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
