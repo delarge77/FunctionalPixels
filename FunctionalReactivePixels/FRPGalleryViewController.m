@@ -7,6 +7,7 @@
 //
 
 #import "FRPGalleryViewController.h"
+#import "FRPGalleryFlowLayout.h"
 
 @interface FRPGalleryViewController ()
 
@@ -14,14 +15,15 @@
 
 @implementation FRPGalleryViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
+- (instancetype)init {
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    FRPGalleryFlowLayout *flowLayout = [[FRPGalleryFlowLayout alloc] init];
+    self = [self initWithCollectionViewLayout:flowLayout];
+    if (!self) {
+        return nil;
+    }
+    
+    return self;
 }
 
 @end

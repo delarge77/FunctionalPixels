@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface FRPPhotoImporter : NSObject
+
++ (RACSignal *)importPhotos;
 
 @end

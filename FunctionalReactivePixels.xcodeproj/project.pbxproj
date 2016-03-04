@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BFF78BB3AFD7D89BF2D4A5B /* libPods-FunctionalReactivePixels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B60592E04ED8FBF816D09D /* libPods-FunctionalReactivePixels.a */; };
 		87DFFD6B1C89CF4000498339 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFD6A1C89CF4000498339 /* main.m */; };
 		87DFFD6E1C89CF4000498339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFD6D1C89CF4000498339 /* AppDelegate.m */; };
-		87DFFD711C89CF4000498339 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFD701C89CF4000498339 /* ViewController.m */; };
+		87DFFD711C89CF4000498339 /* FRPGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFD701C89CF4000498339 /* FRPGalleryViewController.m */; };
 		87DFFD741C89CF4000498339 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DFFD721C89CF4000498339 /* Main.storyboard */; };
 		87DFFD761C89CF4000498339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DFFD751C89CF4000498339 /* Assets.xcassets */; };
 		87DFFD791C89CF4000498339 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DFFD771C89CF4000498339 /* LaunchScreen.storyboard */; };
 		87DFFD841C89CF4000498339 /* FunctionalReactivePixelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFD831C89CF4000498339 /* FunctionalReactivePixelsTests.m */; };
 		87DFFD8F1C89CF4000498339 /* FunctionalReactivePixelsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFD8E1C89CF4000498339 /* FunctionalReactivePixelsUITests.m */; };
+		87DFFD9E1C89D0A200498339 /* FRPGalleryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFD9D1C89D0A200498339 /* FRPGalleryFlowLayout.m */; };
+		87DFFDA11C89EB8800498339 /* FRPPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFDA01C89EB8800498339 /* FRPPhotoModel.m */; };
+		87DFFDA41C89EBCC00498339 /* FRPPhotoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFDA31C89EBCC00498339 /* FRPPhotoImporter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C3288F14D1E7847B7B298D2 /* Pods-FunctionalReactivePixels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalReactivePixels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionalReactivePixels/Pods-FunctionalReactivePixels.debug.xcconfig"; sourceTree = "<group>"; };
+		22B635D18DFF91CCE976A64A /* Pods-FunctionalReactivePixels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalReactivePixels.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionalReactivePixels/Pods-FunctionalReactivePixels.release.xcconfig"; sourceTree = "<group>"; };
+		79B60592E04ED8FBF816D09D /* libPods-FunctionalReactivePixels.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunctionalReactivePixels.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DFFD661C89CF4000498339 /* FunctionalReactivePixels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalReactivePixels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DFFD6A1C89CF4000498339 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		87DFFD6C1C89CF4000498339 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87DFFD6D1C89CF4000498339 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		87DFFD6F1C89CF4000498339 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		87DFFD701C89CF4000498339 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		87DFFD6F1C89CF4000498339 /* FRPGalleryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPGalleryViewController.h; sourceTree = "<group>"; };
+		87DFFD701C89CF4000498339 /* FRPGalleryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPGalleryViewController.m; sourceTree = "<group>"; };
 		87DFFD731C89CF4000498339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87DFFD751C89CF4000498339 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87DFFD781C89CF4000498339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +58,12 @@
 		87DFFD8A1C89CF4000498339 /* FunctionalReactivePixelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalReactivePixelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DFFD8E1C89CF4000498339 /* FunctionalReactivePixelsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionalReactivePixelsUITests.m; sourceTree = "<group>"; };
 		87DFFD901C89CF4000498339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87DFFD9C1C89D0A200498339 /* FRPGalleryFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPGalleryFlowLayout.h; sourceTree = "<group>"; };
+		87DFFD9D1C89D0A200498339 /* FRPGalleryFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPGalleryFlowLayout.m; sourceTree = "<group>"; };
+		87DFFD9F1C89EB8800498339 /* FRPPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPPhotoModel.h; sourceTree = "<group>"; };
+		87DFFDA01C89EB8800498339 /* FRPPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoModel.m; sourceTree = "<group>"; };
+		87DFFDA21C89EBCC00498339 /* FRPPhotoImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPPhotoImporter.h; sourceTree = "<group>"; };
+		87DFFDA31C89EBCC00498339 /* FRPPhotoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoImporter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BFF78BB3AFD7D89BF2D4A5B /* libPods-FunctionalReactivePixels.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16ECE7CF8BE28BB3C10985F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79B60592E04ED8FBF816D09D /* libPods-FunctionalReactivePixels.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		87DFFD5D1C89CF4000498339 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				87DFFD821C89CF4000498339 /* FunctionalReactivePixelsTests */,
 				87DFFD8D1C89CF4000498339 /* FunctionalReactivePixelsUITests */,
 				87DFFD671C89CF4000498339 /* Products */,
+				BD44678DAE6931FD4B9F705D /* Pods */,
+				16ECE7CF8BE28BB3C10985F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +127,14 @@
 			children = (
 				87DFFD6C1C89CF4000498339 /* AppDelegate.h */,
 				87DFFD6D1C89CF4000498339 /* AppDelegate.m */,
-				87DFFD6F1C89CF4000498339 /* ViewController.h */,
-				87DFFD701C89CF4000498339 /* ViewController.m */,
+				87DFFD9F1C89EB8800498339 /* FRPPhotoModel.h */,
+				87DFFDA01C89EB8800498339 /* FRPPhotoModel.m */,
+				87DFFDA21C89EBCC00498339 /* FRPPhotoImporter.h */,
+				87DFFDA31C89EBCC00498339 /* FRPPhotoImporter.m */,
+				87DFFD9C1C89D0A200498339 /* FRPGalleryFlowLayout.h */,
+				87DFFD9D1C89D0A200498339 /* FRPGalleryFlowLayout.m */,
+				87DFFD6F1C89CF4000498339 /* FRPGalleryViewController.h */,
+				87DFFD701C89CF4000498339 /* FRPGalleryViewController.m */,
 				87DFFD721C89CF4000498339 /* Main.storyboard */,
 				87DFFD751C89CF4000498339 /* Assets.xcassets */,
 				87DFFD771C89CF4000498339 /* LaunchScreen.storyboard */,
@@ -140,6 +170,15 @@
 			path = FunctionalReactivePixelsUITests;
 			sourceTree = "<group>";
 		};
+		BD44678DAE6931FD4B9F705D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C3288F14D1E7847B7B298D2 /* Pods-FunctionalReactivePixels.debug.xcconfig */,
+				22B635D18DFF91CCE976A64A /* Pods-FunctionalReactivePixels.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87DFFD931C89CF4000498339 /* Build configuration list for PBXNativeTarget "FunctionalReactivePixels" */;
 			buildPhases = (
+				D7F32FCF9DE48D0FF69B831B /* Check Pods Manifest.lock */,
 				87DFFD621C89CF4000498339 /* Sources */,
 				87DFFD631C89CF4000498339 /* Frameworks */,
 				87DFFD641C89CF4000498339 /* Resources */,
+				97DB8E01BBB76740B1CAB37C /* Embed Pods Frameworks */,
+				AA44DEF592D45E649CC46E12 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,14 +307,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		97DB8E01BBB76740B1CAB37C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FunctionalReactivePixels/Pods-FunctionalReactivePixels-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA44DEF592D45E649CC46E12 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FunctionalReactivePixels/Pods-FunctionalReactivePixels-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7F32FCF9DE48D0FF69B831B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		87DFFD621C89CF4000498339 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87DFFD711C89CF4000498339 /* ViewController.m in Sources */,
+				87DFFDA11C89EB8800498339 /* FRPPhotoModel.m in Sources */,
+				87DFFD711C89CF4000498339 /* FRPGalleryViewController.m in Sources */,
 				87DFFD6E1C89CF4000498339 /* AppDelegate.m in Sources */,
+				87DFFDA41C89EBCC00498339 /* FRPPhotoImporter.m in Sources */,
 				87DFFD6B1C89CF4000498339 /* main.m in Sources */,
+				87DFFD9E1C89D0A200498339 /* FRPGalleryFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +502,7 @@
 		};
 		87DFFD941C89CF4000498339 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C3288F14D1E7847B7B298D2 /* Pods-FunctionalReactivePixels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FunctionalReactivePixels/Info.plist;
@@ -420,6 +514,7 @@
 		};
 		87DFFD951C89CF4000498339 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B635D18DFF91CCE976A64A /* Pods-FunctionalReactivePixels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FunctionalReactivePixels/Info.plist;
@@ -496,6 +591,7 @@
 				87DFFD951C89CF4000498339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87DFFD961C89CF4000498339 /* Build configuration list for PBXNativeTarget "FunctionalReactivePixelsTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +600,7 @@
 				87DFFD981C89CF4000498339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87DFFD991C89CF4000498339 /* Build configuration list for PBXNativeTarget "FunctionalReactivePixelsUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +609,7 @@
 				87DFFD9B1C89CF4000498339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
