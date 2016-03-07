@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1BFF78BB3AFD7D89BF2D4A5B /* libPods-FunctionalReactivePixels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B60592E04ED8FBF816D09D /* libPods-FunctionalReactivePixels.a */; };
+		879C4ABF1C8DE91C00516043 /* FRPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 879C4ABE1C8DE91C00516043 /* FRPCell.m */; };
+		879C4B031C8E126100516043 /* FRPFullSizePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879C4B021C8E126100516043 /* FRPFullSizePhotoViewController.m */; };
+		879C4B061C8E1F4B00516043 /* FRPPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879C4B051C8E1F4B00516043 /* FRPPhotoViewController.m */; };
 		87DFFD6B1C89CF4000498339 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFD6A1C89CF4000498339 /* main.m */; };
 		87DFFD6E1C89CF4000498339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFD6D1C89CF4000498339 /* AppDelegate.m */; };
 		87DFFD711C89CF4000498339 /* FRPGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DFFD701C89CF4000498339 /* FRPGalleryViewController.m */; };
@@ -42,6 +45,12 @@
 		1C3288F14D1E7847B7B298D2 /* Pods-FunctionalReactivePixels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalReactivePixels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionalReactivePixels/Pods-FunctionalReactivePixels.debug.xcconfig"; sourceTree = "<group>"; };
 		22B635D18DFF91CCE976A64A /* Pods-FunctionalReactivePixels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalReactivePixels.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionalReactivePixels/Pods-FunctionalReactivePixels.release.xcconfig"; sourceTree = "<group>"; };
 		79B60592E04ED8FBF816D09D /* libPods-FunctionalReactivePixels.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunctionalReactivePixels.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		879C4ABD1C8DE91C00516043 /* FRPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPCell.h; sourceTree = "<group>"; };
+		879C4ABE1C8DE91C00516043 /* FRPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPCell.m; sourceTree = "<group>"; };
+		879C4B011C8E126100516043 /* FRPFullSizePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPFullSizePhotoViewController.h; sourceTree = "<group>"; };
+		879C4B021C8E126100516043 /* FRPFullSizePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPFullSizePhotoViewController.m; sourceTree = "<group>"; };
+		879C4B041C8E1F4B00516043 /* FRPPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPPhotoViewController.h; sourceTree = "<group>"; };
+		879C4B051C8E1F4B00516043 /* FRPPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoViewController.m; sourceTree = "<group>"; };
 		87DFFD661C89CF4000498339 /* FunctionalReactivePixels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalReactivePixels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DFFD6A1C89CF4000498339 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		87DFFD6C1C89CF4000498339 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,8 +142,14 @@
 				87DFFDA31C89EBCC00498339 /* FRPPhotoImporter.m */,
 				87DFFD9C1C89D0A200498339 /* FRPGalleryFlowLayout.h */,
 				87DFFD9D1C89D0A200498339 /* FRPGalleryFlowLayout.m */,
+				879C4ABD1C8DE91C00516043 /* FRPCell.h */,
+				879C4ABE1C8DE91C00516043 /* FRPCell.m */,
 				87DFFD6F1C89CF4000498339 /* FRPGalleryViewController.h */,
 				87DFFD701C89CF4000498339 /* FRPGalleryViewController.m */,
+				879C4B041C8E1F4B00516043 /* FRPPhotoViewController.h */,
+				879C4B051C8E1F4B00516043 /* FRPPhotoViewController.m */,
+				879C4B011C8E126100516043 /* FRPFullSizePhotoViewController.h */,
+				879C4B021C8E126100516043 /* FRPFullSizePhotoViewController.m */,
 				87DFFD721C89CF4000498339 /* Main.storyboard */,
 				87DFFD751C89CF4000498339 /* Assets.xcassets */,
 				87DFFD771C89CF4000498339 /* LaunchScreen.storyboard */,
@@ -361,8 +376,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				87DFFDA11C89EB8800498339 /* FRPPhotoModel.m in Sources */,
+				879C4ABF1C8DE91C00516043 /* FRPCell.m in Sources */,
 				87DFFD711C89CF4000498339 /* FRPGalleryViewController.m in Sources */,
+				879C4B061C8E1F4B00516043 /* FRPPhotoViewController.m in Sources */,
 				87DFFD6E1C89CF4000498339 /* AppDelegate.m in Sources */,
+				879C4B031C8E126100516043 /* FRPFullSizePhotoViewController.m in Sources */,
 				87DFFDA41C89EBCC00498339 /* FRPPhotoImporter.m in Sources */,
 				87DFFD6B1C89CF4000498339 /* main.m in Sources */,
 				87DFFD9E1C89D0A200498339 /* FRPGalleryFlowLayout.m in Sources */,
