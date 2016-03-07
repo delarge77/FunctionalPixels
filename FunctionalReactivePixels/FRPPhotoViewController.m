@@ -24,14 +24,11 @@
 @implementation FRPPhotoViewController
 
 - (instancetype)initWithPhotoModel:(FRPPhotoModel *) photoModel index:(NSInteger) photoIndex {
-
     self = [super init];
-    
     if (self) {
         self.photoModel = photoModel;
         self.photoIndex = photoIndex;
     }
-    
     return self;
 }
 
