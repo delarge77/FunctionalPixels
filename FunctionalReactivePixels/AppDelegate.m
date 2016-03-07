@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <500px-iOS-api/PXAPI.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.apiHelper = [[PXAPIHelper alloc] initWithHost:nil consumerKey:@"DC2To2BS0ic1ChKDK15d44M42YHf9gbUJgdFoF0m" consumerSecret:@"i8WL4chWoZ4kw9fh3jzHK7XzTer1y5tUNvsTFNnB"];
+    NSString *consumerKey = @"DC2To2BS0ic1ChKDK15d44M42YHf9gbUJgdFoF0m";
+    NSString *consumerSecret = @"i8WL4chWoZ4kw9fh3jzHK7XzTer1y5tUNvsTFNnB";
+    
+    [PXRequest setConsumerKey:consumerKey consumerSecret:consumerSecret];
     
     return YES;
 }

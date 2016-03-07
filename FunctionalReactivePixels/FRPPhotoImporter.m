@@ -8,9 +8,18 @@
 
 #import "FRPPhotoImporter.h"
 #import "FRPPhotoModel.h"
-#import "AppDelegate.h"
+//#import "AppDelegate.h"
+#import <PXRequest.h>
 
 @implementation FRPPhotoImporter
+
++ (NSURLRequest *) popularURLRequest {
+    return [[PXRequest apiHelper] urlRequestForPhotoFeature:PXAPIHelperPhotoFeaturePopular resultsPerPage:100 page:0 photoSizes:PXPhotoModelSizeThumbnail sortOrder:PXAPIHelperSortOrderRating except:PXPhotoModelCategoryNude];
+}
+
++ (NSURLRequest *) photoURLRequest:(FRPPhotoModel *) photoModel {
+    return [[PXRequest apiHelper] urlRequestForPhotoID:photoModel.identifier.integerValue];
+}
 
 + (RACReplaySubject *)importPhotos {
 
@@ -39,11 +48,19 @@
     return subject;
 }
 
-+ (NSURLRequest *) popularURLRequest {
++ (RACSignal *) fetchPhotoDetails:(FRPPhotoModel *)photoModel {
     
-    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    return [delegate.apiHelper urlRequestForPhotoFeature:PXAPIHelperPhotoFeaturePopular resultsPerPage:100 page:0 photoSizes:PXPhotoModelSizeThumbnail sortOrder:PXAPIHelperSortOrderRating except:PXPhotoModelCategoryNude];
+    NSURLRequest *request = [self photoURLRequest:photoModel];
+    return [[[[[[NSURLConnection rac_sendAsynchronousRequest:request] reduceEach:^id(NSURLResponse *response, NSData *data){
+        return data;
+    }] deliverOn:[RACScheduler mainThreadScheduler]] map:^id(NSData *data) {
+        id results = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil][@"photo"];
+        
+        [self configurePhotoModel:photoModel withDictionary:results];
+        [self downloadFullSizedImageForPhotoModel:photoModel];
+        
+        return photoModel;
+    }] publish] autoconnect];
 }
 
 + (void) configurePhotoModel:(FRPPhotoModel *) photoModel withDictionary:(NSDictionary *) dictionary {
@@ -74,30 +91,6 @@
     }] map:^id(id value) {
         return value[@"url"];
     }]array] firstObject];
-}
-
-+ (RACReplaySubject *) fetchPhotoDetails:(FRPPhotoModel *)photoModel {
-    RACReplaySubject *subject = [RACReplaySubject subject];
-    NSURLRequest *request = [self photoURLRequest:photoModel];
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler
-                                            :^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-                                                if (data) {
-                                                    id results = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil][@"photo"];
-                                                    [self configurePhotoModel:photoModel withDictionary:results];
-                                                    [self downloadFullSizedImageForPhotoModel:photoModel];
-                                                    [subject sendNext:photoModel];
-                                                    [subject sendCompleted];
-                                                } else {
-                                                    [subject sendError:connectionError];
-                                                }
-                                            }];
-    
-    return subject;
-}
-
-+ (NSURLRequest *) photoURLRequest:(FRPPhotoModel *) photoModel {
-    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    return [delegate.apiHelper urlRequestForPhotoID:photoModel.identifier.integerValue];
 }
 
 + (void) downloadThumbnailForPhotoModel:(FRPPhotoModel *) photoModel{
