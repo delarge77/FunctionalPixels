@@ -94,28 +94,20 @@
 }
 
 + (void) downloadThumbnailForPhotoModel:(FRPPhotoModel *) photoModel{
-    [self download:photoModel.thumbnailURL withCompletion:^(NSData *data) {
-        photoModel.thumbnailData = data;
-    }];
+    RAC(photoModel, thumbnailData) = [self download:photoModel.thumbnailURL];
 }
 
 + (void) downloadFullSizedImageForPhotoModel:(FRPPhotoModel *) photoModel {
-    [self download:photoModel.fullsizedURL withCompletion:^(NSData *data) {
-        photoModel.fullsizedData = data;
-    }];
+    RAC(photoModel, fullsizedData) = [self download:photoModel.fullsizedURL];
 }
 
-+ (void) download:(NSString *) urlString withCompletion:(void(^)(NSData *data)) completion {
-    
++ (RACSignal *) download:(NSString *) urlString {
     NSAssert(urlString, @"URL must not be nil");
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-       if (completion) {
-           completion(data);
-       }
-    }];
-    
+    return [[[NSURLConnection rac_sendAsynchronousRequest:request]
+    map:^id(RACTuple *value) {
+        return [value second];
+    }] deliverOn:[RACScheduler mainThreadScheduler]];
 }
 
 @end
