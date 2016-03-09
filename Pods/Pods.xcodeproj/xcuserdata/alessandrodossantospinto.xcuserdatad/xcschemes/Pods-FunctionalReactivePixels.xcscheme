@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D7DCDA88C2C759E9BCAB2BB6'
+               BlueprintIdentifier = 'A11E6108AFE1619133F7FBA0'
                BlueprintName = 'Pods-FunctionalReactivePixels'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-FunctionalReactivePixels.a'>

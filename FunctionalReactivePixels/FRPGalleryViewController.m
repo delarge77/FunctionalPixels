@@ -17,7 +17,7 @@
 
 static NSString *cellIdentifier = @"cell";
 
-@interface FRPGalleryViewController ()//<FRPFullSizePhotoViewControllerDelegate>
+@interface FRPGalleryViewController ()
 
 @property (strong, nonatomic) NSArray *photosArray;
 @property (strong, nonatomic) id collectionViewDelegate;
@@ -50,15 +50,15 @@ static NSString *cellIdentifier = @"cell";
                                                     :UICollectionViewScrollPositionCenteredVertically animated:NO];
     }];
     
-//    self.collectionViewDelegate = [[RACDelegateProxy alloc] initWithProtocol:@protocol(UICollectionViewDelegate)];
-//    [[self.collectionViewDelegate rac_signalForSelector:@selector(collectionView:didSelectItemAtIndexPath:)]
-//    subscribeNext:^(RACTuple *arguments) {
-//        FRPFullSizePhotoViewController *viewController = [[FRPFullSizePhotoViewController alloc] initWithPhotoModels
-//                                                          :self.photosArray currentPhotoIndex
-//                                                          :[(NSIndexPath *) arguments.second item]];
-//        viewController.delegate = (id<FRPFullSizePhotoViewControllerDelegate>)viewControllerDelegate;
-//        [self.navigationController pushViewController:viewController animated:YES];
-//    }];
+    self.collectionViewDelegate = [[RACDelegateProxy alloc] initWithProtocol:@protocol(UICollectionViewDelegate)];
+    [[self.collectionViewDelegate rac_signalForSelector:@selector(collectionView:didSelectItemAtIndexPath:)]
+    subscribeNext:^(RACTuple *arguments) {
+        FRPFullSizePhotoViewController *viewController = [[FRPFullSizePhotoViewController alloc] initWithPhotoModels
+                                                          :self.photosArray currentPhotoIndex
+                                                          :[(NSIndexPath *) arguments.second item]];
+        viewController.delegate = (id<FRPFullSizePhotoViewControllerDelegate>)viewControllerDelegate;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }];
     
     
     self.title = @"Popular on 500px";
@@ -92,11 +92,11 @@ static NSString *cellIdentifier = @"cell";
 
 #pragma mark - UICollectionView Delegate Methods
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    FRPFullSizePhotoViewController *viewController = [[FRPFullSizePhotoViewController alloc]
-                                                      initWithPhotoModels:self.photosArray
-                                                      currentPhotoIndex:indexPath.item];
-    [self.navigationController pushViewController:viewController animated:YES];
-}
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    FRPFullSizePhotoViewController *viewController = [[FRPFullSizePhotoViewController alloc]
+//                                                      initWithPhotoModels:self.photosArray
+//                                                      currentPhotoIndex:indexPath.item];
+//    [self.navigationController pushViewController:viewController animated:YES];
+//}
 
 @end

@@ -8,7 +8,6 @@
 
 #import "FRPPhotoImporter.h"
 #import "FRPPhotoModel.h"
-//#import "AppDelegate.h"
 #import <PXRequest.h>
 
 @implementation FRPPhotoImporter

@@ -9,7 +9,7 @@ pod'ReactiveCocoa','2.1.4'
 pod'libextobjc'
 pod'500px-iOS-api'
 pod'SVProgressHUD'
-
+pod'ReactiveViewModel','0.1.1'
 end
 
 target 'FunctionalReactivePixelsTests' do
